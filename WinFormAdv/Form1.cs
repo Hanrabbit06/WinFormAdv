@@ -12,6 +12,7 @@ namespace WinFormAdv
 {
     public partial class Form1 : Form
     {
+        public static int PROGRESS_BAR_STEP = 10;
         public Form1()
         {
             InitializeComponent();
@@ -80,6 +81,42 @@ namespace WinFormAdv
             ofd.ShowDialog();
             if(ofd.ShowDialog() == DialogResult.OK) {
                 textBox1.Text = System.IO.File.ReadAllText(ofd.FileName);
+            }
+        }
+
+        private void toolStripProgressBar1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 확대하기축소하기기본값복원ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toolStripProgressBar1.Value = 50;
+        }
+
+        private void 확대ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (toolStripProgressBar1.Value + PROGRESS_BAR_STEP  >= 100)
+            {
+                toolStripProgressBar1.Value = 100;
+            }
+            else
+            {
+                toolStripProgressBar1.Value += PROGRESS_BAR_STEP;
+            }
+
+            
+        }
+
+        private void 축소ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (toolStripProgressBar1.Value < PROGRESS_BAR_STEP)
+            {
+                toolStripProgressBar1.Value = 0;
+            }
+            else
+            {
+                toolStripProgressBar1.Value -= PROGRESS_BAR_STEP;
             }
         }
     }
