@@ -41,5 +41,10 @@ namespace WinFormAdv
         {
 
         }
+
+        private void 상태표시줄ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
