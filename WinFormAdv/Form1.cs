@@ -31,5 +31,10 @@ namespace WinFormAdv
         {
 
         }
+
+        private void 새창ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
