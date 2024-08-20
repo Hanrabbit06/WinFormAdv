@@ -56,5 +56,10 @@ namespace WinFormAdv
         {
 
         }
+
+        private void 끝내ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
